@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MoviArte | El Blog de Danza</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; }
+        header { display: flex; justify-content: space-between; padding: 20px 50px; align-items: center; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo { font-size: 24px; font-weight: bold; color: #DC143C; letter-spacing: 1px; }
+        .nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: 500; }
+        .btn { padding: 10px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-primary { background: #DC143C; color: white; }
+        .btn-outline { border: 2px solid #DC143C; color: #DC143C; margin-left: 10px; }
+        
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&w=1920'); background-size: cover; height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; font-family: 'Georgia', serif; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 30px; }
+        
+        .features { padding: 60px 50px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; background: #f9f9f9; }
+        .feature-card h3 { margin-bottom: 10px; color: #1a1a1a; }
+        
+        .newsletter { background: #1a1a1a; color: white; padding: 60px 20px; text-align: center; }
+        .input-group { margin-top: 20px; }
+        .input-field { padding: 10px; width: 300px; border: none; border-radius: 5px 0 0 5px; }
+        .btn-submit { padding: 10px 20px; background: #DC143C; color: white; border: none; border-radius: 0 5px 5px 0; cursor: pointer; font-weight: bold; }
+        
+        footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #666; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MoviArte.</div>
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">Estilos</a>
+            <a href="#">Historia</a>
+            <a href="#">Salud</a>
+        </nav>
+        <a href="#" class="btn btn-primary">Suscríbete</a>
+    </header>
+
+    <section class="hero">
+        <h1>Donde la Pasión encuentra el Ritmo</h1>
+        <p>Tu enciclopedia digital sobre el universo de la danza. Historia, técnica, cultura y actualidad en un solo lugar.</p>
+        <div>
+            <a href="#" class="btn btn-primary">Leer el Blog</a>
+            <a href="#" class="btn btn-outline" style="background:transparent; color:white; border-color:white;">Sobre Nosotros</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>🎭 Cultura e Historia</h3>
+            <p>Conoce los orígenes de los grandes movimientos artísticos.</p>
+        </div>
+        <div class="feature-card">
+            <h3>🩰 Técnica Depurada</h3>
+            <p>Consejos de expertos para mejorar tu ejecución y postura.</p>
+        </div>
+        <div class="feature-card">
+            <h3>❤️ Salud del Bailarín</h3>
+            <p>Nutrición, fisioterapia y bienestar mental para artistas.</p>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Únete a la comunidad MoviArte</h2>
+        <p>Recibe tips semanales y nuestra guía exclusiva para bailarines.</p>
+        <div class="input-group">
+            <input type="email" placeholder="Tu correo electrónico" class="input-field">
+            <button class="btn-submit">QUIERO UNIRME</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MoviArte. El arte de moverte.</p>
+    </footer>
+
+</body>
+</html>
