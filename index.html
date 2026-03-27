@@ -3,70 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos y Condiciones - LENIX YAEL REINOSO CIFUENTES</title>
+    <title>LENIX YAEL REINOSO CIFUENTES | Guía Educativa sobre Danza y Expresión</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #4c1d95;
---dark: #111827; --text: #374151; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6;
-color: var(--text); margin: 0; background-color: #fdf2f8; }
-        header { background-color: #ffffff;
-padding: 20px 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo { font-size: 16px;
-font-weight: 700; color: var(--primary); text-decoration: none; text-transform: uppercase; }
-        .container { max-width: 900px;
-margin: 60px auto; padding: 50px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        :root {
+            --primary: #4c1d95;
+            /* Púrpura Profundo / Arte */
+            --secondary: #db2777;
+            /* Magenta Vibrante / Movimiento */
+            --dark: #111827;
+            --light: #fdf2f8; /* Fondo rosado muy suave */
+            --text: #374151;
+            --accent: #be185d; 
+        }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text);
+margin: 0; background-color: #ffffff; }
+        header { background-color: #ffffff; padding: 20px 5%;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; flex-wrap: wrap;
 }
-        h1, h2 { color: var(--dark);
+        .logo { font-size: 16px; font-weight: 700; color: var(--primary); text-decoration: none; text-transform: uppercase;
+letter-spacing: 0.5px; }
+        nav { margin-top: 10px;
 }
-        h1 { border-bottom: 3px solid var(--primary); padding-bottom: 15px; margin-bottom: 35px; font-size: 32px;
+        nav a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 600;
+font-size: 14px; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary);
 }
-        h2 { margin-top: 40px; font-size: 22px;
+        .hero { background: linear-gradient(135deg, #f3e8ff 0%, #fbcfe8 100%); padding: 80px 5%;
+text-align: center; border-bottom: 1px solid #f9a8d4; }
+        .hero h1 { color: var(--dark);
+font-size: 42px; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 18px;
+max-width: 800px; margin: 0 auto 30px; color: #4c1d95; }
+        .badge { background-color: var(--primary);
+color: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; display: inline-block; margin-bottom: 20px;
 }
-        p { font-size: 16px; color: #4b5563; margin-bottom: 20px;
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 5%;
 }
-        .highlight { background: #f3e8ff; padding: 15px; border-left: 4px solid var(--primary); border-radius: 4px;
-font-weight: 600; color: var(--dark); }
-        footer { text-align: center; padding: 40px 20px;
-background: var(--dark); color: #cbd5e1; margin-top: 60px; font-size: 14px; }
+        .section-title { font-size: 32px; color: var(--dark); text-align: center; margin-bottom: 50px; position: relative;
+}
+        .section-title::after { content: ''; width: 60px; height: 4px; background-color: var(--accent); display: block;
+margin: 15px auto 0; border-radius: 2px; }
+        .grid { display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        .card { background: white;
+padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 5px solid var(--secondary); transition: transform 0.3s;
+}
+        .card:hover { transform: translateY(-5px);
+}
+        .card h3 { color: var(--dark); margin-top: 0; font-size: 20px;
+}
+        .info-panel { background-color: var(--light); border-radius: 12px; padding: 40px; margin-bottom: 60px;
+border-left: 6px solid var(--primary); }
+        .info-panel h3 { color: var(--dark); margin-top: 0;
+}
+        .about-section { background: #ffffff; padding: 40px; border-radius: 12px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 60px; border: 1px solid #fce7f3;
+}
+        
+        table { width: 100%;
+border-collapse: collapse; margin-bottom: 40px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;
+}
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #fce7f3;
+}
+        th { background-color: var(--primary); color: white; font-weight: 600;
+}
+        tr:hover { background-color: #fdf2f8;
+}
+        
+        footer { background-color: var(--dark);
+color: #cbd5e1; padding: 60px 5% 20px; font-size: 14px; }
+        .footer-grid { display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; border-bottom: 1px solid #374151; padding-bottom: 40px;
+}
+        .footer-grid h4 { color: white; margin-top: 0; font-size: 18px;
+}
+        .footer-links a { color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 12px;
+transition: color 0.3s;}
+        .footer-links a:hover { color: white;
+}
+        .copyright { text-align: center; margin-top: 20px;
+}
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">← Volver a la Guía Educativa</a>
+        <a href="index.html" class="logo">LENIX YAEL REINOSO CIFUENTES</a>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#beneficios">Beneficios Integrales</a>
+            <a href="#generos">Géneros y Estilos</a>
+            <a href="#mitos">Desmintiendo Mitos</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+        </nav>
     </header>
 
+    <section id="inicio" class="hero">
+        <span class="badge">Portal Educativo Cultural - Sin Fines Comerciales</span>
+        <h1>El Arte y la Ciencia de la Danza</h1>
+        <p>Una guía enciclopédica diseñada para explorar la danza no solo como una expresión artística universal, sino como una herramienta fundamental para el bienestar físico, psicológico y cultural del ser humano.</p>
+    </section>
+
     <div class="container">
-        <h1>Términos y Condiciones de Uso</h1>
-        <p><strong>Última actualización:</strong> Marzo de 2026</p>
+        
+        <div id="sobre-mi" class="about-section">
+            <h2>Propósito Académico del Sitio</h2>
+            <p>Este portal es una iniciativa estrictamente educativa, investigativa y cultural, operada de manera personal e independiente por <strong>LENIX YAEL REINOSO CIFUENTES</strong>. Mi propósito exclusivo es la divulgación de conocimientos sobre la historia, los beneficios y la teoría de la danza.</p>
+            <p><strong>Declaro de manera oficial y transparente que este sitio NO tiene fines comerciales. NO opero una academia de baile, NO vendo cursos presenciales ni virtuales, NO comercializo entradas para eventos artísticos y NO capto inscripciones para membresías.</strong> Toda la información se proporciona de forma libre y gratuita como recurso de estudio y cultura general.</p>
+        </div>
 
-        <h2>1. Aceptación Universal de los Términos</h2>
-        <p>El simple acceso, lectura y consulta de los artículos históricos y guías teóricas en este sitio web, estructurado y dirigido de forma completamente independiente por <strong>LENIX YAEL REINOSO CIFUENTES</strong>, constituye la aceptación expresa y sin reservas de los presentes Términos y Condiciones por parte del visitante.</p>
+        <h2 id="beneficios" class="section-title">Beneficios Biomecánicos y Psicológicos</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Desarrollo Neuroplástico</h3>
+                <p>Aprender y memorizar coreografías estimula el hipocampo y fortalece las vías neuronales. Estudios neurológicos han demostrado que la danza es una de las actividades más efectivas para mejorar la memoria espacial y reducir el riesgo de enfermedades neurodegenerativas en la adultez.</p>
+            </div>
+            <div class="card">
+                <h3>Acondicionamiento Cardiovascular</h3>
+                <p>El baile es un ejercicio aeróbico sumamente completo. Una sesión continua de danza incrementa el ritmo cardíaco, mejora la circulación sanguínea, aumenta la capacidad pulmonar y favorece la quema de lípidos, todo mientras el individuo disfruta de la música, reduciendo la percepción de fatiga.</p>
+            </div>
+            <div class="card">
+                <h3>Regulación Emocional</h3>
+                <p>El movimiento rítmico sincronizado con la música provoca una liberación masiva de endorfinas, serotonina y dopamina. Esto convierte a la danza en una terapia no farmacológica altamente efectiva para combatir episodios de estrés agudo, ansiedad y cuadros depresivos leves.</p>
+            </div>
+        </div>
 
-        <h2>2. Ausencia Absoluta de Servicios y Comercialización Artística</h2>
-        <p class="highlight">Se certifica y advierte de manera oficial que el presente entorno digital es una iniciativa educativa personal, carente en su totalidad de vinculación comercial con academias de danza, estudios de ballet, gimnasios o compañías teatrales.</p>
-        <p>La información teórica sobre biomecánica, historia del arte y géneros de danza publicada aquí tiene un carácter exclusivamente pedagógico. En este portal no se realizan transacciones económicas, no se cobran mensualidades por clases virtuales o presenciales, no se venden indumentarias de baile y no se agendan coreografías profesionales.</p>
+        <h2 id="generos" class="section-title">Evolución y Géneros Fundamentales</h2>
+        <div class="info-panel">
+            <h3>La Diversidad del Lenguaje Corporal</h3>
+            <p>La danza ha evolucionado paralelamente con la historia de la humanidad, dividiéndose en corrientes que requieren diferentes técnicas corporales:</p>
+            <ul style="margin-top: 15px; padding-left: 20px;">
+                <li style="margin-bottom: 10px;"><strong>Ballet Clásico:</strong> Nacido en las cortes renacentistas italianas y francesas, es la base técnica de casi todas las danzas occidentales. Se caracteriza por su extrema disciplina, el trabajo de puntas, la rotación externa de las piernas (en dehors) y la búsqueda de una estética de ingravidez.</li>
+                <li style="margin-bottom: 10px;"><strong>Danza Contemporánea:</strong> Surgió como una rebelión contra las estrictas reglas del ballet. Los bailarines contemporáneos utilizan la gravedad a su favor, exploran el trabajo de suelo (floorwork) y buscan expresar emociones crudas y conceptos abstractos sin las limitaciones del rigor clásico.</li>
+                <li style="margin-bottom: 10px;"><strong>Danzas Folclóricas y Tradicionales:</strong> Son el archivo vivo de la identidad de los pueblos. En Colombia, ritmos como la Cumbia, el Mapalé o el Joropo no son solo pasos de baile, sino narrativas históricas que relatan el mestizaje indígena, africano y europeo.</li>
+            </ul>
+        </div>
 
-        <h2>3. Carácter Puramente Educacional y Prevención Física</h2>
-        <p>Este proyecto persigue un objetivo netamente cívico y cultural: educar sobre los beneficios del arte y el movimiento. Bajo ningún pretexto, la lectura de esta información reemplaza el entrenamiento físico supervisado por un profesional. La danza requiere acondicionamiento; la información expuesta aquí no constituye consejo médico, fisioterapéutico ni de entrenamiento deportivo personalizado.</p>
+        <h2 id="mitos" class="section-title">Desmintiendo Mitos Artísticos</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: var(--text);">Las barreras mentales suelen ser el mayor obstáculo para acercarse al arte del movimiento.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Mito Popular</th>
+                    <th>La Realidad Anatómica y Formativa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>"Se necesita tener talento o 'ritmo en la sangre' desde el nacimiento"</strong></td>
+                    <td>Falso. El ritmo y la coordinación son habilidades neuromotoras que se entrenan y desarrollan mediante la práctica constante y la repetición consciente, no son dones mágicos exclusivos.</td>
+                </tr>
+                <tr>
+                    <td><strong>"Si no empiezas a bailar desde niño, ya es demasiado tarde"</strong></td>
+                    <td>Falso. Si bien los bailarines profesionales de ballet clásico suelen iniciar a temprana edad por la plasticidad ósea, cualquier persona, a cualquier edad, puede aprender a bailar para mejorar su salud, coordinación y expresión corporal.</td>
+                </tr>
+                <tr>
+                    <td><strong>"La danza es únicamente para personas con cuerpos delgados o atléticos"</strong></td>
+                    <td>Falso. La biomecánica del baile se adapta a todo tipo de complexión física. La danza inclusiva y contemporánea demuestra que la capacidad expresiva y el control corporal no están determinados por un peso o una forma corporal específica.</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <h2>4. Exoneración de Responsabilidades por Lesiones</h2>
-        <p>La titularidad de este dominio no asume responsabilidad civil, médica o material por lesiones musculares, esguinces, caídas o cualquier problema de salud física que un visitante pueda sufrir al intentar ejecutar movimientos o coreografías en su domicilio basándose en interpretaciones libres de la teoría expuesta en este blog. Todo entrenamiento físico debe ser supervisado directamente por instructores certificados en espacios acondicionados adecuadamente.</p>
-
-        <h2>5. Respeto al Derecho de Autor y Propiedad Intelectual</h2>
-        <p>La redacción de los artículos formativos, resúmenes históricos y desmitificaciones sobre la danza son propiedad intelectual de la autora del blog. Se permite la cita de fragmentos para trabajos universitarios, exposiciones escolares o ponencias culturales, siempre que se referencie la fuente original de manera explícita (mediante un enlace URL). Queda estrictamente prohibida su copia masiva, clonación o uso comercial en páginas de academias de baile de terceros.</p>
-
-        <h2>6. Vías Formales de Notificación</h2>
-        <p>Para notificaciones formales sobre el cumplimiento de estas políticas, rectificaciones académicas o consultas de investigación cultural, la administración atiende a través de:</p>
-        <ul>
-            <li><strong>Despacho electrónico:</strong> killerdanila3@gmail.com</li>
-            <li><strong>Sede Física de Contacto:</strong> Cl. 65 Sur #78H -51, Bogota, Colombia</li>
-        </ul>
     </div>
 
-    <footer>
-        &copy; 2026 Portal educativo redactado por LENIX YAEL REINOSO CIFUENTES. Todos los derechos reservados.
+    <footer id="legal">
+        <div class="footer-grid">
+            <div class="footer-links">
+                <h4>Marco Legal Documental</h4>
+                <a href="politica-de-privacidad.html">Política de Privacidad</a>
+                <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+                <a href="#sobre-mi">Acerca del Proyecto Educativo</a>
+            </div>
+
+            <div>
+                <h4>Información de la Autora</h4>
+                <p style="color: #cbd5e1; line-height: 1.6;">
+                Sitio web administrado y redactado por:<br>
+                <strong style="color: white;">LENIX YAEL REINOSO CIFUENTES</strong><br>
+                <em>Plataforma académica de cultura y arte.</em>
+                </p>
+            </div>
+
+            <div>
+                <h4>Datos de Contacto Oficial</h4>
+                <p style="color: #cbd5e1; line-height: 1.6;">
+                    <strong>Responsable:</strong> LENIX YAEL REINOSO CIFUENTES<br>
+                    <strong>Email:</strong> <a href="mailto:killerdanila3@gmail.com" style="color: #cbd5e1; text-decoration: none;">killerdanila3@gmail.com</a><br>
+                    <strong>Teléfono:</strong> +57 3185264458<br>
+                    <strong>Sede:</strong> Cl. 65 Sur #78H -51, Bogota, Colombia
+                </p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2026 Editado y operado exclusivamente por LENIX YAEL REINOSO CIFUENTES. Todos los derechos reservados.
+        </div>
     </footer>
 
 </body>
